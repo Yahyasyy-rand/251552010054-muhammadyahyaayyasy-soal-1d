@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FULL_NAME: "Muhammad Yahya Ayyyasy"
+        ROLE: "Mahasiswa Teknik Informatika"
+        UNIVERSITY: "STMIK Tazkia"
+        SEMESTER: "2"
+        EMAIL: "yahyasyy@stmiktazkia.ac.id"
+        LOCATION: "Bogor, Jawa Barat"
+        BIO: "Mahasiswa Teknik Informatika yang tertarik pada struktur data, algoritma, dan cloud computing."
+        SKILLS: "Python, Docker, Git"
+    image: cv-251552010054-yahya:latest
+    container_name: cv-251552010054-yahya-web
+    ports:
+      - "8787:80"
+    restart: unless-stopped
